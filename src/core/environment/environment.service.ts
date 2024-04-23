@@ -24,8 +24,8 @@ import { Environment } from './environment.type';
 export class EnvironmentService {
   get<Key extends keyof Environment>(key: Key): Environment[Key] {
     const environment = {
-      MY_SECRET_VALUE: String(process.env.MY_SECRET_VALUE),
-      MY_SECRET_NUMBER: Number(process.env.MY_SECRET_NUMBER),
+      SHEET_URL: String(process.env.SHEET_URL),
+      SCRIPT_URL: String(process.env.SCRIPT_URL),
     };
 
     return environment[key];

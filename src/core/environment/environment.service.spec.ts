@@ -17,8 +17,8 @@ describe('EnvironmentService', () => {
   describe('get', () => {
     describe('when the environment variable is defined', () => {
       const environment: Environment = {
-        MY_SECRET_VALUE: 'secret',
-        MY_SECRET_NUMBER: 12345,
+        SHEET_URL: 'secret',
+        SCRIPT_URL: '',
       };
 
       beforeEach(() => {
