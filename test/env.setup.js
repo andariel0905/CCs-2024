@@ -11,5 +11,7 @@
  * if the variable is not set, and avoid that error when testing it.
  */
 
-process.env.MY_SECRET_VALUE = 'MY_SECRET_VALUE';
-process.env.MY_SECRET_NUMBER = 12345;
+process.env.SHEET_URL =
+  'https://drive.google.com/open?id=1WPfzMHQUacBXOrQknzJNwaOKpJpXNbKU-pMeUt5VeRg';
+process.env.SCRIPT_URL =
+  'https://script.google.com/d/1GM3dhs0A7TVWBMUkAF8fbpwtTX4-sa1Efhq_RQyim9XmuP7kLxxBTqQu/edit';
