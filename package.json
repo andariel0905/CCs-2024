@@ -28,7 +28,7 @@
     "push": "clasp push",
     "push:watch": "npm run push -- --watch",
     "test": "jest",
-    "test:cov": "npm run test -- --coverage",
+    "test:cov": "npm run test -- --passWithNoTests",
     "test:file": "npm run test -- --bail --findRelatedTests --passWithNoTests",
     "test:watch": "npm run test -- --watch",
     "check:all": "npm run lint:check-all && npm run format:check-all && npm run types:check-all && npm run test:cov",
