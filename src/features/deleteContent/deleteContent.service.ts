@@ -1,6 +1,6 @@
 import { IDeleteContent } from 'src/interfaces/deleteContent.interface';
 
-export const DeleteContent: IDeleteContent = (
+export const deleteContent: IDeleteContent = (
   spreadsheet,
   sheetName: string,
 ) => {

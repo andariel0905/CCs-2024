@@ -21,7 +21,7 @@ import { Environment } from './environment.type';
  * }
  * ```
  */
-export const EnvironmentService = {
+export const environmentService = {
   get<Key extends keyof Environment>(key: Key): Environment[Key] {
     const environment = {
       SHEET_URL: String(process.env.SHEET_URL),
