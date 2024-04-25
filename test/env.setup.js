@@ -15,3 +15,5 @@ process.env.SHEET_URL =
   'https://docs.google.com/spreadsheets/d/1E75BX73c87TBlm9Z6sb1fT2TofKWvHTdnUDl4TRQ-TY/edit';
 process.env.SCRIPT_URL =
   'https://script.google.com/u/0/home/projects/1YumfJntNcv0Uebcx6Km8aSf3lIgAsPB1hU1zAmxF9ChF8rUnTNwGXci_';
+process.env.CONTROL_URL =
+  'https://docs.google.com/spreadsheets/d/1L-2apr65x34OK3_TV2af3twDN6fw3zVFeZaECtlCy4E/edit';

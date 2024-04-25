@@ -26,6 +26,7 @@ export const environmentService = {
     const environment = {
       SHEET_URL: String(process.env.SHEET_URL),
       SCRIPT_URL: String(process.env.SCRIPT_URL),
+      CONTROL_URL: String(process.env.CONTROL_URL),
     };
 
     return environment[key];
@@ -45,4 +46,19 @@ export const environmentService = {
     'Henning',
     'Campo austral.',
   ],
+  sheetsContent: {
+    Mayoristanet: [],
+    'Kalis.': [],
+    Victory: [],
+    'Tecnigraf.': [],
+    'Todo envase': [],
+    LDT: [],
+    Dankon: [],
+    Eridanus: [],
+    Blancaluna: [],
+    Gasatex: [],
+    Nogada: [],
+    Henning: [],
+    'Campo austral.': [],
+  },
 };
