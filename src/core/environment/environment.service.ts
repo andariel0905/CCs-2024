@@ -21,7 +21,7 @@ import { Environment } from './environment.type';
  * }
  * ```
  */
-export class EnvironmentService {
+export const EnvironmentService = {
   get<Key extends keyof Environment>(key: Key): Environment[Key] {
     const environment = {
       SHEET_URL: String(process.env.SHEET_URL),
@@ -29,5 +29,20 @@ export class EnvironmentService {
     };
 
     return environment[key];
-  }
-}
+  },
+  sheetsNames: [
+    'Mayoristanet',
+    'Kalis.',
+    'Victory',
+    'Tecnigraf.',
+    'Todo envase',
+    'LDT',
+    'Dankon',
+    'Eridanus',
+    'Blancaluna',
+    'Gasatex',
+    'Nogada',
+    'Henning',
+    'Campo austral.',
+  ],
+};
