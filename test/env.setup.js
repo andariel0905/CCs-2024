@@ -12,6 +12,6 @@
  */
 
 process.env.SHEET_URL =
-  'https://drive.google.com/open?id=1WPfzMHQUacBXOrQknzJNwaOKpJpXNbKU-pMeUt5VeRg';
+  'https://docs.google.com/spreadsheets/d/1E75BX73c87TBlm9Z6sb1fT2TofKWvHTdnUDl4TRQ-TY';
 process.env.SCRIPT_URL =
-  'https://script.google.com/d/1GM3dhs0A7TVWBMUkAF8fbpwtTX4-sa1Efhq_RQyim9XmuP7kLxxBTqQu/edit';
+  'https://script.google.com/u/0/home/projects/1YumfJntNcv0Uebcx6Km8aSf3lIgAsPB1hU1zAmxF9ChF8rUnTNwGXci_';
