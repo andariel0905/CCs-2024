@@ -1,1 +1,3 @@
-export type IGetDataFromControl = () => object;
+import { ISheetsData } from './sheetsData.interface';
+
+export type IGetDataFromControl = (sheetsData: ISheetsData) => ISheetsData;
