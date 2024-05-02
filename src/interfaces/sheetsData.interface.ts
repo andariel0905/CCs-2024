@@ -1,15 +1,21 @@
-export interface ISheetsData {
-  Mayoristanet: object[];
-  'Kalis.': object[];
-  Victory: object[];
-  'Tecnigraf.': object[];
-  'Todo envase': object[];
-  LDT: object[];
-  Dankon: object[];
-  Eridanus: object[];
-  Blancaluna: object[];
-  Gasatex: object[];
-  Nogada: object[];
-  Henning: object[];
-  'Campo austral.': object[];
-}
+export type ISheetsData = {
+  [key: string]: string[][];
+  Mayoristanet: string[][];
+  'Kalis.': string[][];
+  Victory: string[][];
+  'Tecnigraf.': string[][];
+  'Todo envase': string[][];
+  LDT: string[][];
+  Dankon: string[][];
+  'Carlos Lento': string[][];
+  LYL: string[][];
+  Eridanus: string[][];
+  Blancaluna: string[][];
+  Gasatex: string[][];
+  Nogada: string[][];
+  Marino: string[][];
+  AADI: string[][];
+  Prohygene: string[][];
+  Henning: string[][];
+  'Campo austral.': string[][];
+};

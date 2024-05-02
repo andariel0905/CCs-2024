@@ -1,4 +1,4 @@
-import { Environment } from './environment.type';
+import { EnvironmentService } from './environment.type';
 
 /**
  * Environment variables usage approach
@@ -21,8 +21,8 @@ import { Environment } from './environment.type';
  * }
  * ```
  */
-export const environmentService = {
-  get<Key extends keyof Environment>(key: Key): Environment[Key] {
+export const environmentService: EnvironmentService = {
+  get(key) {
     const environment = {
       SHEET_URL: String(process.env.SHEET_URL),
       SCRIPT_URL: String(process.env.SCRIPT_URL),
@@ -39,10 +39,15 @@ export const environmentService = {
     'Todo envase',
     'LDT',
     'Dankon',
+    'Carlos Lento',
+    'LYL',
     'Eridanus',
     'Blancaluna',
     'Gasatex',
     'Nogada',
+    'Marino',
+    'AADI',
+    'Prohygene',
     'Henning',
     'Campo austral.',
   ],
@@ -54,10 +59,15 @@ export const environmentService = {
     'Todo envase': [],
     LDT: [],
     Dankon: [],
+    'Carlos Lento': [],
+    LYL: [],
     Eridanus: [],
     Blancaluna: [],
     Gasatex: [],
     Nogada: [],
+    Marino: [],
+    AADI: [],
+    Prohygene: [],
     Henning: [],
     'Campo austral.': [],
   },

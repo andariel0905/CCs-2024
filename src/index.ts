@@ -1,5 +1,6 @@
 import { environmentService } from '@core/environment';
-import { getDataFromControl } from '@features/importData/getDataFromControl.service';
+import { getDataFromControl } from '@features/getData/getDataFromControl.service';
+import { postDataOnCCS } from '@features/postData/postDataOnCCS';
 // // // import { deleteContent } from '@features/deleteContent/deleteContent.service';
 // // @ts-ignore
 // function getThisSpreadsheet(): GoogleAppsScript.Spreadsheet.Spreadsheet {
@@ -15,8 +16,9 @@ import { getDataFromControl } from '@features/importData/getDataFromControl.serv
 // }
 
 function cargarDatos(): void {
-  const sheetsData = environmentService.sheetsData;
-  getDataFromControl(sheetsData);
+  let sheetsData = environmentService.sheetsData;
+  sheetsData = getDataFromControl(sheetsData);
+  postDataOnCCS(sheetsData);
 }
 
 export function onOpen(): void {
