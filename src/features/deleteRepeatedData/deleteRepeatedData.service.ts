@@ -1,7 +1,9 @@
 import { environmentService } from '@core/environment';
-// import { ISheetsData } from 'src/interfaces/sheetsData.interface';
+import { ISheetsData } from 'src/interfaces/sheetsData.interface';
 
-export const deleteRepeatedData = (/*dataFromControl: ISheetsData*/) => {
+export const deleteRepeatedData = (dataFromControl: ISheetsData) => {
   const newData = structuredClone(environmentService.sheetsData);
+  console.log(dataFromControl);
   console.log(newData);
+  return newData;
 };
