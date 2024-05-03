@@ -30,7 +30,7 @@ function loadSheetsData(
   dataFromControl: string[][] | undefined,
 ): ISheetsData {
   dataFromControl?.forEach((row) => {
-    switch (row[4]) {
+    switch (row[3]) {
       case 'MAYORISTANET.COM SA':
         sheetsData['Mayoristanet'].push(row);
         break;
@@ -99,7 +99,7 @@ export const getDataFromControl: IGetDataFromControl = (
   const fechaActual = obtenerFechaActual();
   const SS = SpreadsheetApp.openByUrl(controlUrl).getSheetByName(fechaActual);
   const lastRow = SS?.getLastRow();
-  const dataFromControl = SS?.getRange('A1:J' + lastRow).getValues();
+  const dataFromControl = SS?.getRange('A2:J' + lastRow).getValues();
   sheetsData = loadSheetsData(sheetsData, dataFromControl);
   return sheetsData;
 };

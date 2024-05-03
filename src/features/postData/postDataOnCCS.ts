@@ -8,9 +8,12 @@ export function postDataOnCCS(sheetsData: ISheetsData) {
 
   sheetsNames.forEach((name) => {
     const activeSheet = sheetSS.getSheetByName(name);
+    const lastRow = activeSheet?.getLastRow();
     const activeData = sheetsData[name];
-    for (let i = 1; i < activeData.length; i++) {
-      activeSheet?.getRange(i + 1, 1, 1, 9).setValues([activeData[i]]);
+    if (lastRow !== undefined) {
+      for (let i = 0; i < activeData.length; i++) {
+        activeSheet?.getRange(lastRow + i, 1, 1, 10).setValues([activeData[i]]);
+      }
     }
   });
 }

@@ -1,4 +1,5 @@
 import { environmentService } from '@core/environment';
+import { deleteRepeatedData } from '@features/deleteRepeatedData/deleteRepeatedData.service';
 import { getDataFromControl } from '@features/getData/getDataFromControl.service';
 import { postDataOnCCS } from '@features/postData/postDataOnCCS';
 // // // import { deleteContent } from '@features/deleteContent/deleteContent.service';
@@ -18,6 +19,7 @@ import { postDataOnCCS } from '@features/postData/postDataOnCCS';
 function cargarDatos(): void {
   let sheetsData = environmentService.sheetsData;
   sheetsData = getDataFromControl(sheetsData);
+  deleteRepeatedData();
   postDataOnCCS(sheetsData);
 }
 
