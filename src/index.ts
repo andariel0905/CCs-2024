@@ -17,7 +17,7 @@ import { postDataOnCCS } from '@features/postData/postDataOnCCS';
 // }
 
 function cargarDatos(): void {
-  let sheetsData = environmentService.sheetsData;
+  let sheetsData = structuredClone(environmentService.sheetsData);
   sheetsData = getDataFromControl(sheetsData);
   deleteRepeatedData();
   postDataOnCCS(sheetsData);
