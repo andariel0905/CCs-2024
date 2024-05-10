@@ -1,7 +1,6 @@
 import { environmentService } from '@core/environment';
 import { deleteRepeatedData } from '@features/deleteRepeatedData/deleteRepeatedData.service';
 import { getDataFromControl } from '@features/getData/getDataFromControl.service';
-import { postDataOnCCS } from '@features/postData/postDataOnCCS';
 // // // import { deleteContent } from '@features/deleteContent/deleteContent.service';
 // // @ts-ignore
 // function getThisSpreadsheet(): GoogleAppsScript.Spreadsheet.Spreadsheet {
@@ -20,7 +19,6 @@ function cargarDatos(): void {
   let sheetsData = structuredClone(environmentService.sheetsData);
   sheetsData = getDataFromControl(sheetsData);
   sheetsData = deleteRepeatedData(sheetsData);
-  postDataOnCCS(sheetsData);
 }
 
 export function onOpen(): void {

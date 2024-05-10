@@ -1,16 +1,18 @@
-import { IGetDataFromControl } from 'src/interfaces/getDataFromControl.interface';
-import {
-  obtenerFechaActual,
-  loadSheetsData,
-} from './getDataUsageFunctions.service';
 import { environmentService } from '@core/environment';
+import { ISheetsData } from 'src/interfaces/sheetsData.interface';
 
-export const getDataFromControl: IGetDataFromControl = (sheetsData) => {
-  const controlUrl = environmentService.get('CONTROL_URL');
-  const fechaActual = obtenerFechaActual();
-  const SS = SpreadsheetApp.openByUrl(controlUrl).getSheetByName(fechaActual);
-  const lastRow = SS?.getLastRow();
-  const dataFromControl = SS?.getRange('A2:J' + lastRow).getValues();
-  sheetsData = loadSheetsData(sheetsData, dataFromControl);
+export const getDataFromCCS = (): ISheetsData => {
+  const sheetsData = structuredClone(environmentService.sheetsData);
+  const ccsUrl = environmentService.get('SHEET_URL');
+  const sheetNames = environmentService.sheetsNames;
+  const SS = SpreadsheetApp.openByUrl(ccsUrl);
+  sheetNames.forEach((sheetName) => {
+    const activeSheet = SS.getSheetByName(sheetName);
+    if (activeSheet) {
+      const lastRow = activeSheet?.getLastRow();
+      const activeData = activeSheet?.getRange('A2:J' + lastRow).getValues();
+      sheetsData[sheetName] = activeData;
+    }
+  });
   return sheetsData;
 };
