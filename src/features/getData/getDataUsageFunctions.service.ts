@@ -30,58 +30,58 @@ export function loadSheetsData(
   dataFromControl?.forEach((row) => {
     switch (row[3]) {
       case 'MAYORISTANET.COM SA':
-        sheetsData['Mayoristanet'].push(row);
+        sheetsData['Mayoristanet'].set(row[2], row);
         break;
       case 'CREANDO MOMENTOS S.R.L.':
-        sheetsData['Kalis.'].push(row);
+        sheetsData['Kalis.'].set(row[2], row);
         break;
       case 'VICTORY PRODUCTOS DE LIMPIEZA PROFESIONAL S.R.L.':
-        sheetsData['Victory'].push(row);
+        sheetsData['Victory'].set(row[2], row);
         break;
       case 'DISTRIBUIDORA LACTEOS DON TORCUATO S.A.':
-        sheetsData['LDT'].push(row);
+        sheetsData['LDT'].set(row[2], row);
         break;
       case 'TECNIGRAF ENVASES SRL':
-        sheetsData['Tecnigraf.'].push(row);
+        sheetsData['Tecnigraf.'].set(row[2], row);
         break;
       case 'EMEIKA S R L':
-        sheetsData['Todo envase'].push(row);
+        sheetsData['Todo envase'].set(row[2], row);
         break;
       case 'DANKON S.R.L.':
-        sheetsData['Dankon'].push(row);
+        sheetsData['Dankon'].set(row[2], row);
         break;
       case 'LENTO CARLOS ALBERTO':
-        sheetsData['Carlos Lento'].push(row);
+        sheetsData['Carlos Lento'].set(row[2], row);
         break;
       case 'L Y L EMPRENDALS S.A.':
-        sheetsData['LYL'].push(row);
+        sheetsData['LYL'].set(row[2], row);
         break;
       case 'ERIDANUS S.A.':
-        sheetsData['Eridanus'].push(row);
+        sheetsData['Eridanus'].set(row[2], row);
         break;
       case 'DISTRIBUIDORA BLANCALUNA S A':
-        sheetsData['Blancaluna'].push(row);
+        sheetsData['Blancaluna'].set(row[2], row);
         break;
       case 'GASATEX S A':
-        sheetsData['Gasatex'].push(row);
+        sheetsData['Gasatex'].set(row[2], row);
         break;
       case 'NOGADA SA':
-        sheetsData['Nogada'].push(row);
+        sheetsData['Nogada'].set(row[2], row);
         break;
       case 'VOLQUETES Y TRANSPORTES MARINO S A':
-        sheetsData['Marino'].push(row);
+        sheetsData['Marino'].set(row[2], row);
         break;
       case 'AADI CAPIF ASOCIACION CIVIL RECAUDADORA':
-        sheetsData['AADI'].push(row);
+        sheetsData['AADI'].set(row[2], row);
         break;
       case 'NATIONAL SERVICE ARGENTINA SA':
-        sheetsData['Prohygene'].push(row);
+        sheetsData['Prohygene'].set(row[2], row);
         break;
       case 'HENNING JUAN FEDERICO':
-        sheetsData['Henning'].push(row);
+        sheetsData['Henning'].set(row[2], row);
         break;
       case 'CAMPO AUSTRAL SA':
-        sheetsData['Campo austral.'].push(row);
+        sheetsData['Campo austral.'].set(row[2], row);
         break;
       default:
         break;

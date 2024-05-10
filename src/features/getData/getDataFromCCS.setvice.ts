@@ -11,7 +11,9 @@ export const getDataFromCCS = (): ISheetsData => {
     if (activeSheet) {
       const lastRow = activeSheet?.getLastRow();
       const activeData = activeSheet?.getRange('A2:J' + lastRow).getValues();
-      sheetsData[sheetName] = activeData;
+      activeData.forEach((row) => {
+        sheetsData[sheetName].set(row[2], row);
+      });
     }
   });
   return sheetsData;
