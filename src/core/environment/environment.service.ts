@@ -29,6 +29,7 @@ export const environmentService: EnvironmentService = {
     'Prohygene',
     'Henning',
     'Campo austral.',
+    'Otros',
   ],
   sheetsData: {
     Mayoristanet: new Map(),
@@ -49,5 +50,6 @@ export const environmentService: EnvironmentService = {
     Prohygene: new Map(),
     Henning: new Map(),
     'Campo austral.': new Map(),
+    Otros: new Map(),
   },
 };

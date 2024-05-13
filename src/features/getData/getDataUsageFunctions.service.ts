@@ -84,6 +84,7 @@ export function loadSheetsData(
         sheetsData['Campo austral.'].set(row[2], row);
         break;
       default:
+        sheetsData['Otros'].set(row[2], row);
         break;
     }
   });

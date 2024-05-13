@@ -19,5 +19,6 @@ export type ISheetsData =
       Prohygene: Map<string, string[]>;
       Henning: Map<string, string[]>;
       'Campo austral.': Map<string, string[]>;
+      Otros: Map<string, string[]>;
     }
   | { [key: string]: Map<string, string[]> };
