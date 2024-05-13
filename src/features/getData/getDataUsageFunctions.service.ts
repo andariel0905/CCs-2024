@@ -71,9 +71,6 @@ export function loadSheetsData(
       case 'VOLQUETES Y TRANSPORTES MARINO S A':
         sheetsData['Marino'].set(row[2], row);
         break;
-      case 'AADI CAPIF ASOCIACION CIVIL RECAUDADORA':
-        sheetsData['AADI'].set(row[2], row);
-        break;
       case 'NATIONAL SERVICE ARGENTINA SA':
         sheetsData['Prohygene'].set(row[2], row);
         break;
