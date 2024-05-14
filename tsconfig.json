@@ -18,7 +18,6 @@
     "allowUnreachableCode": false,
     "pretty": true,
     "alwaysStrict": true,
-    "noImplicitAny": true,
     "noImplicitOverride": true,
     "noImplicitThis": true,
     "noUnusedLocals": true,
