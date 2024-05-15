@@ -8,6 +8,7 @@ export function postDataOnCCS(sheetsData: ISheetsData) {
   for (const sheetName of sheetsNames) {
     const activeSheet = CSS_SS.getSheetByName(sheetName);
     const activeData = [...sheetsData[sheetName].values()];
-    activeSheet?.getRange('A2:L1000').setValues(activeData);
+    const lastRow = activeData.length;
+    activeSheet?.getRange('A2:L' + lastRow).setValues(activeData);
   }
 }
