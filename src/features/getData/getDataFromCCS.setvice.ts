@@ -9,9 +9,9 @@ export const getDataFromCCS = (): ISheetsData => {
   sheetNames.forEach((sheetName) => {
     const activeSheet = SS.getSheetByName(sheetName);
     if (activeSheet) {
-      let lastRow = activeSheet?.getLastRow();
+      let lastRow = activeSheet.getLastRow();
       lastRow = lastRow === 1 ? 2 : lastRow;
-      const activeData = activeSheet?.getRange('A2:J' + lastRow).getValues();
+      const activeData = activeSheet.getRange('A2:J' + lastRow).getValues();
       activeData.forEach((row) => {
         sheetsData[sheetName].set(row[2], row);
       });
