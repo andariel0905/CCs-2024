@@ -4,15 +4,21 @@ import { ISheetsData } from 'src/interfaces/sheetsData.interface';
 
 export const deleteRepeatedData = (
   dataFromControl: ISheetsData,
-): ISheetsData => {
+  formatsFromControl: ISheetsData,
+): [ISheetsData, ISheetsData] => {
   const sheetNames = environmentService.sheetsNames;
-  const dataFromCCS = getDataFromCCS();
+  const [dataFromCCS, formatsFromCCS] = getDataFromCCS();
   const clearData: ISheetsData = {};
+  const clearFormats: ISheetsData = {};
   sheetNames.forEach((sheetName) => {
     clearData[sheetName] = new Map([
       ...dataFromControl[sheetName],
       ...dataFromCCS[sheetName],
     ]);
+    clearFormats[sheetName] = new Map([
+      ...formatsFromControl[sheetName],
+      ...formatsFromCCS[sheetName],
+    ]);
   });
-  return clearData;
+  return [clearData, clearFormats];
 };

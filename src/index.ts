@@ -21,7 +21,7 @@ function cargarDatos(): void {
   let sheetsData = structuredClone(environmentService.sheetsData);
   let sheetsFormat = structuredClone(environmentService.sheetsData);
   [sheetsData, sheetsFormat] = getDataFromControl(sheetsData, sheetsFormat);
-  sheetsData = deleteRepeatedData(sheetsData);
+  [sheetsData, sheetsFormat] = deleteRepeatedData(sheetsData, sheetsFormat);
   postDataOnCCS(sheetsData, sheetsFormat);
 }
 
